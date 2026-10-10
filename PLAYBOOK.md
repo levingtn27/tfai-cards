@@ -39,3 +39,13 @@ Owner: Levon Gevorgyan (founder, talentsforai.com). Everything is approved by Le
 ## Known facts
 - Search Console and GA4 are connected in Windsor. The site job pages come from SME API, Micro1, Turing feeds.
 - Job schema warnings in Search Console (validThrough, baseSalary.value) are non-critical; decided to leave them.
+
+## UTM links (added 2026-10-10)
+Every talentsforai.com link in a post gets: ?utm_source=<linkedin|facebook|telegram>&utm_medium=social&utm_campaign=jobs&utm_content=<profile|page>
+(profile = Levon's LinkedIn profile, page = company page / Facebook). Bait posts carry no link in the post; the first-comment link Levon pastes should use utm_content=comment.
+
+## Learnings from the 2026-10-10 test
+- A Buffer post stays status "draft" if edit_post is given customScheduled without saveToDraft:false; pass saveToDraft:false plus text and assets to make it "scheduled".
+- Use list_posts with small first=N and status/channel filters; unfiltered output is ~100k chars.
+- Skip any job page whose body does not match its title or shows "[Rate/Salary]" style placeholders (known broken Turing pages: mathematics-expert-111563, computer-science-stem-111548, domain-expert-python-111872, life-sciences-subject-matter-expert-biology-111854).
+- Scheduled posts count toward the 10-per-channel free-plan queue limit.
