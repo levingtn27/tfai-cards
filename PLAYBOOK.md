@@ -49,3 +49,9 @@ Every talentsforai.com link in a post gets: ?utm_source=<linkedin|facebook|teleg
 - Use list_posts with small first=N and status/channel filters; unfiltered output is ~100k chars.
 - Skip any job page whose body does not match its title or shows "[Rate/Salary]" style placeholders (known broken Turing pages: mathematics-expert-111563, computer-science-stem-111548, domain-expert-python-111872, life-sciences-subject-matter-expert-biology-111854).
 - Scheduled posts count toward the 10-per-channel free-plan queue limit.
+
+## Turing roles: verify before posting (added 2026-10-12)
+The Turing job feed sometimes carries a description that does not match the job title (Turing's own data; the scraper copies it faithfully). Known examples: ~20 jobs with dermatology text under unrelated titles, and 111563 with hardware text and "[Rate/Salary]" placeholders.
+- Before posting a Turing role, check that the page's one-liner and body fit the title, contain no "[...]" placeholders, and are not the dermatology / "clinical reviews" text unless the title is medical.
+- If unsure, pick an SME Careers or Micro1 role instead. Mention in the package which Turing roles were skipped and why.
+- Verified OK so far: Business Consulting experts (111319), Finance experts (111315, feed text consistent).
