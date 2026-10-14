@@ -55,3 +55,6 @@ The Turing job feed sometimes carries a description that does not match the job 
 - Before posting a Turing role, check that the page's one-liner and body fit the title, contain no "[...]" placeholders, and are not the dermatology / "clinical reviews" text unless the title is medical.
 - If unsure, pick an SME Careers or Micro1 role instead. Mention in the package which Turing roles were skipped and why.
 - Verified OK so far: Business Consulting experts (111319), Finance experts (111315, feed text consistent).
+
+## Eligibility wording (added 2026-10-14, Levon's standing rule)
+Never write "No countries are listed", "check eligibility when you apply", "hours/duration aren't listed", "terms vary by region" or any similar not-listed / check-your-region disclaimer in posts or Telegram texts. Only state restrictions the page actually imposes (e.g. "Outside the US", "US only", PST overlap). If a page gives no countries, simply say nothing about it.
