@@ -58,3 +58,6 @@ The Turing job feed sometimes carries a description that does not match the job 
 
 ## Eligibility wording (added 2026-10-14, Levon's standing rule)
 Never write "No countries are listed", "check eligibility when you apply", "hours/duration aren't listed", "terms vary by region" or any similar not-listed / check-your-region disclaimer in posts or Telegram texts. Only state restrictions the page actually imposes (e.g. "Outside the US", "US only", PST overlap). If a page gives no countries, simply say nothing about it.
+
+## Telegram follow line (added 2026-10-15, Levon's standing rule)
+Every post on every channel (profile, company page, Facebook, and bait posts) ends, just before the hashtags, with: `📲 All links and new roles daily on Telegram: https://t.me/talentsforai` (no UTM on this link). Telegram's channel holds all the links.
