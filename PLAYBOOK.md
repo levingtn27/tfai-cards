@@ -5,14 +5,14 @@ Owner: Levon Gevorgyan (founder, talentsforai.com). Everything is approved by Le
 ## Channels (Buffer org 6a21b6a32d4d87722f01c048, free plan: max 10 scheduled posts PER CHANNEL, no first comment, images need a public URL)
 - LinkedIn personal profile `levon-tfa`: 6a21b853c687a22dd45ea723  (3 job posts/day, ONE is a comment-bait post)
 - LinkedIn company page `talents-for-ai`: 6a21b853c687a22dd45ea724  (same 3 jobs, links in text, NO bait, no "tag someone" line). AUTO-POSTED, see "Auto-posting"
-- Facebook page `Talents for AI`: 6ac9d50f6a5c39ccb66db01e  (same 3 jobs, links in text, NO bait; create_post needs metadata {"facebook":{"type":"post"}})
+- Facebook page `Talents for AI`: 6ac9d50f6a5c39ccb66db01e  (same 3 jobs, links in text, NO bait; AUTO-POSTED like the company page; create_post needs metadata {"facebook":{"type":"post"}})
 - Telegram: no tool. Prepare a Telegram text per post for Levon to paste himself (direct talentsforai.com links, flags, short).
 - Times (Asia/Yerevan, +04:00): 11:00, 13:30, 17:00, the same on all channels. Weekdays only. Schedule only after approval.
 
 ## Auto-posting (approved by Levon on 2026-11-14)
 AUTOPOST: ON   (Levon flips this to OFF by saying "pause auto-posting"; if OFF, treat the company page like the other channels: drafts only)
 
-Scope: ONLY the LinkedIn company page `talents-for-ai` (6a21b853c687a22dd45ea724), job posts in the standard template. Facebook, Levon's personal profile, bait posts, Wed/Fri personal posts and anything else still need his "approve".
+Scope: ONLY the LinkedIn company page `talents-for-ai` (6a21b853c687a22dd45ea724) and the Facebook page `Talents for AI` (6ac9d50f6a5c39ccb66db01e, metadata {"facebook":{"type":"post"}}; Facebook added by Levon 2026-11-14), job posts in the standard template. Levon's personal profile, bait posts, Wed/Fri personal posts and anything else still need his "approve".
 How: the daily run builds the company-page post, runs every check below, then schedules it itself (edit_post/create_post with customScheduled, saveToDraft false, dueAt 11:00, 13:30, 17:00 Asia/Yerevan, image and text included). Do not publish immediately; keep the delay so Levon can delete it in Buffer.
 Checks (ALL must pass, otherwise leave that post as a DRAFT and say why in the digest):
 1. Job comes from SME Careers, Micro1 or Turing. NEVER Mercor.
@@ -20,7 +20,7 @@ Checks (ALL must pass, otherwise leave that post as a DRAFT and say why in the d
 3. The link has the UTM parameters from this playbook; the card image URL returns 200 and the card was looked at.
 4. Not a duplicate: the job (or same company+role) is not in Buffer posts of the last 14 days (list_posts) or already queued.
 5. Post follows the style rules: no em dashes, max 2 hashtags, Telegram follow line before the hashtags, no eligibility disclaimers.
-6. Max 3 auto posts per day, and the channel stays under the 10-scheduled-post limit.
+6. Max 3 auto posts per day per channel, and each channel stays under the 10-scheduled-post limit.
 Digest: the final message always lists what was auto-scheduled (job, time, link) and what was held, with reasons. Never edit or delete posts Levon made himself.
 
 ## Content split (decided 2026-11-14 from 30 days of LinkedIn data)
@@ -49,11 +49,11 @@ Digest: the final message always lists what was auto-scheduled (job, time, link)
 - Push first: `git fetch origin main` then rebase/pull before pushing.
 
 ## Daily package (Levon's 8am Yerevan, weekdays)
-1. 3 job posts for the company page (auto-posted per "Auto-posting"); Facebook gets the same 3 as drafts; the profile gets only what the content split says (reposts of the 1-2 best jobs a week, bait only when it fits) + Telegram versions + image for each.
+1. 3 job posts for the company page (auto-posted per "Auto-posting"); Facebook gets the same 3, auto-posted; the profile gets only what the content split says (reposts of the 1-2 best jobs a week, bait only when it fits) + Telegram versions + image for each.
 2. Comment list: 5-8 recent LinkedIn posts worth commenting on, each with a ready comment (specific, adds value, no spam). If real posts cannot be found, say so and ask Levon for targets. Never invent posts.
 3. Analytics brief from the private repo `levingtn27/tfai-analytics`, file `analytics-latest.md` (GA4 property 515464087 + Search Console, pulled every morning at 07:30 by a launchd job on Levon's Mac mini and pushed there; see "Analytics feed" below). Call add_repo (owner levingtn27, repo tfai-analytics, access read), `git clone --depth 1`, read the file. Check its "Pulled:" date: if older than 1 day say "analytics stale (last pull <date>)" and use it only as background; if the repo or file is unavailable write "analytics unavailable today"; never estimate numbers. Do NOT use Windsor for GA4/Search Console (free plan returns only an empty row since 2026-10-22). Use the file's tables for: Yesterday and 7 days, top pages, channels, Search Console movers, 2-3 concrete suggestions (SEO, tools/affiliate pages, email, new sources, revenue). Mondays: weekly summary + one article idea ('is X legit' style). Known: /blog/is-mercor-legit is the best page (647 clicks/28d, position 6.2); Appen/DataAnnotation/Outlier legit pages have impressions but low CTR.
 4. Wed and Fri: one personal LinkedIn post for Levon's profile. Ask him 2-3 short questions about what really happened that week (numbers, results, lessons) and for photos. Never invent stories or numbers. His best posts were personal stories with numbers.
-5. Save everything except the auto-posted company-page posts as Buffer DRAFTS (saveToDraft true) with images, so nothing publishes by accident. After Levon says approve (or sends edits), schedule them (edit_post with mode customScheduled and dueAt; keep assets and metadata).
+5. Save everything except the auto-posted company-page and Facebook posts as Buffer DRAFTS (saveToDraft true) with images, so nothing publishes by accident. After Levon says approve (or sends edits), schedule them (edit_post with mode customScheduled and dueAt; keep assets and metadata).
 6. Final message: the package, clearly, ending with a request to reply "approve" or edits.
 
 ## Known facts
