@@ -32,7 +32,7 @@ Digest: the final message always lists what was auto-scheduled (job, time, link)
 ## Job selection
 - Sources: SME Careers, Micro1, Turing. NEVER Mercor (Mercor does not accept referrals from Armenia, Levon's country).
 - Find roles on talentsforai.com (sitemaps https://talentsforai.com/job-sitemap.xml and job-sitemap2.xml; each job page shows pay, source, requirements). Verify pay, location and requirements on EVERY page you mention before writing. Pay can differ per page.
-- Prefer broad, easy, high-reach roles (language experts, survey, generalist), visible pay, soft requirements, worldwide eligibility. Do not repeat a role posted in the last 7 days (check Buffer sent and scheduled posts).
+- Prefer broad, easy, high-reach roles (language experts, survey, generalist), visible pay, soft requirements, worldwide eligibility. Do not repeat a role posted in the last 7 days (check Buffer sent and scheduled posts). ALSO check history beyond Buffer's last 30 posts: `ls cards/*/` filenames show every role ever carded (a Nordic language post was repeated 3 times on 2026-11-21 because only Buffer was checked). Never re-post a role/cluster that appears in cards/ unless it is 30+ days old and Levon agrees.
 - If the SME listing restricts countries but our page says "Worldwide", the page is wrong: front-load the real countries in the post and tell Levon about the page problem.
 - If a role says there is no active project yet, say so honestly in the post.
 - If a post covers several languages/roles: ONE link per language/role (never one link for several), and the card shows ALL flags.
