@@ -81,7 +81,7 @@ Never write "No countries are listed", "check eligibility when you apply", "hour
 
 ## Telegram follow line (updated 2026-11-21 after a commenter asked "why would a job application link redirect to Telegram?")
 The line must never read like an application link. It is a plain invitation to follow the channel, placed just before the hashtags, no UTM on the link, no em dashes:
-- Levon's profile and bait posts (first person): `📲 I post all roles with links on my Telegram channel - you can follow it: https://t.me/talentsforai`
-- Company page and Facebook (we): `📲 We post all roles with links on our Telegram channel - you can follow it: https://t.me/talentsforai`
+- Levon's profile and bait posts (first person): `📲 Follow my Telegram channel for all open roles and direct links: https://t.me/talentsforai` (Levon chose this wording 2026-11-21)
+- Company page and Facebook (we): `📲 Follow our Telegram channel for all open roles and direct links: https://t.me/talentsforai`
 - On posts that carry the apply links directly (company page, Facebook) the line is optional extra, never the way to apply. On bait posts the way to get the link stays "comment and send me your field".
 - Telegram channel posts themselves do not carry this line.
