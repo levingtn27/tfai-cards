@@ -19,7 +19,7 @@ Checks (ALL must pass, otherwise leave that post as a DRAFT and say why in the d
 2. The talentsforai.com job page returns HTTP 200 and pay, location and requirements in the post match it.
 3. The link has the UTM parameters from this playbook; the card image URL returns 200 and the card was looked at.
 4. Not a duplicate: the job (or same company+role) is not in Buffer posts of the last 14 days (list_posts) or already queued.
-5. Post follows the style rules: no em dashes, max 2 hashtags, Telegram follow line before the hashtags, no eligibility disclaimers.
+5. Post follows the style rules: no em dashes, max 2 hashtags, Telegram follow line (new wording, see Telegram follow line section) before the hashtags, no eligibility disclaimers.
 6. Max 3 auto posts per day per channel, and each channel stays under the 10-scheduled-post limit.
 Digest: the final message always lists what was auto-scheduled (job, time, link) and what was held, with reasons. Never edit or delete posts Levon made himself.
 
@@ -79,5 +79,9 @@ The Turing job feed sometimes carries a description that does not match the job 
 ## Eligibility wording (added 2026-10-14, Levon's standing rule)
 Never write "No countries are listed", "check eligibility when you apply", "hours/duration aren't listed", "terms vary by region" or any similar not-listed / check-your-region disclaimer in posts or Telegram texts. Only state restrictions the page actually imposes (e.g. "Outside the US", "US only", PST overlap). If a page gives no countries, simply say nothing about it.
 
-## Telegram follow line (added 2026-10-15, Levon's standing rule)
-Every post on every channel (profile, company page, Facebook, and bait posts) ends, just before the hashtags, with: `📲 All links and new roles daily on Telegram: https://t.me/talentsforai` (no UTM on this link). Telegram's channel holds all the links.
+## Telegram follow line (updated 2026-11-21 after a commenter asked "why would a job application link redirect to Telegram?")
+The line must never read like an application link. It is a plain invitation to follow the channel, placed just before the hashtags, no UTM on the link, no em dashes:
+- Levon's profile and bait posts (first person): `📲 I post all roles with links on my Telegram channel - you can follow it: https://t.me/talentsforai`
+- Company page and Facebook (we): `📲 We post all roles with links on our Telegram channel - you can follow it: https://t.me/talentsforai`
+- On posts that carry the apply links directly (company page, Facebook) the line is optional extra, never the way to apply. On bait posts the way to get the link stays "comment and send me your field".
+- Telegram channel posts themselves do not carry this line.
