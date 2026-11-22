@@ -6,7 +6,7 @@ Owner: Levon Gevorgyan (founder, talentsforai.com). Everything is approved by Le
 - LinkedIn personal profile `levon-tfa`: 6a21b853c687a22dd45ea723  (3 job posts/day, ONE is a comment-bait post)
 - LinkedIn company page `talents-for-ai`: 6a21b853c687a22dd45ea724  (same 3 jobs, links in text, NO bait, no "tag someone" line). AUTO-POSTED, see "Auto-posting"
 - Facebook page `Talents for AI`: 6ac9d50f6a5c39ccb66db01e  (same 3 jobs, links in text, NO bait; AUTO-POSTED like the company page; create_post needs metadata {"facebook":{"type":"post"}})
-- Telegram: no tool. Prepare a Telegram text per post for Levon to paste himself (direct talentsforai.com links, flags, short).
+- Telegram: no tool. Prepare a Telegram text per post for Levon to paste himself, ready to paste as is (Levon, 2026-11-22): write out EVERY link in full (one per country/language/role, never 'same pattern for the rest'), each with ?utm_source=telegram&utm_medium=social&utm_campaign=jobs&utm_content=page, flags, short, and the 4 hashtags at the end (no Telegram follow line in Telegram posts).
 - Times (Asia/Yerevan, +04:00): 11:00, 13:30, 17:00, the same on all channels. 7 days a week (Levon, 2026-11-14; compare weekend vs weekday results after two weekends and cut weekends to 1-2 posts if clearly worse). Auto-posting channels schedule themselves; everything else only after approval.
 
 ## Auto-posting (approved by Levon on 2026-11-14)
@@ -19,7 +19,7 @@ Checks (ALL must pass, otherwise leave that post as a DRAFT and say why in the d
 2. The talentsforai.com job page returns HTTP 200 and pay, location and requirements in the post match it.
 3. The link has the UTM parameters from this playbook; the card image URL returns 200 and the card was looked at.
 4. Not a duplicate: the job (or same company+role) is not in Buffer posts of the last 14 days (list_posts) or already queued.
-5. Post follows the style rules: no em dashes, max 2 hashtags, Telegram follow line (new wording, see Telegram follow line section) before the hashtags, no eligibility disclaimers.
+5. Post follows the style rules: no em dashes, 4 hashtags (#AIJobs #RemoteWork + 2 role-relevant), Telegram follow line (new wording, see Telegram follow line section) before the hashtags, no eligibility disclaimers.
 6. Max 3 auto posts per day per channel, and each channel stays under the 10-scheduled-post limit.
 Digest: the final message always lists what was auto-scheduled (job, time, link) and what was held, with reasons. Never edit or delete posts Levon made himself.
 
@@ -38,10 +38,10 @@ Digest: the final message always lists what was auto-scheduled (job, time, link)
 - If a post covers several languages/roles: ONE link per language/role (never one link for several), and the card shows ALL flags.
 
 ## Post style
-- No em dashes. Max 2 hashtags (#AIJobs #RemoteWork). Short punchy lines. Eligibility restrictions first.
+- No em dashes. Hashtags (Levon, 2026-11-22): always #AIJobs #RemoteWork plus 2 role-relevant ones (e.g. #Mathematics #Python, #LegalJobs #RealEstateLaw), so 4 in total, on every Buffer post AND every Telegram text. Short punchy lines. Eligibility restrictions first.
 - Header line like: `🌍 [HIRING] Role - up to $X/h`, then `Remote · Contract · Weekly pay` only if true, what you'd do, good fit checklist with ✅, branding line `SME Careers · via Talents for AI` or `Micro1 · via Talents for AI`, then the link(s), then (profile only) a "Tag someone ..." line.
 - Flags in text: a flag emoji before each language/country. Levon approved the current flag choices (language is a language; flags are fine as is).
-- Bait post (profile only, max ONE per day, only for broad easy roles). Standard line (Levon's wording, 2026-10-25): "Want the link? Comment and send me a message with your field: history, law, finance, journalism or tech. I'll reply with the apply link." Adapt the field list to the role (languages for a language role, "Field: ..." for domain roles, tools or specialties otherwise); keep the rest of the sentence unchanged. No "Connect with me". The bait post carries no link. Do NOT prepare first-comment text (Buffer free has no first comment; Levon replies to commenters himself). Instead end the package with one line per bait post: "Reply link (for commenters): <exact talentsforai.com job URL with utm_content=comment>". Take the URL from the verified job page, never build it from the title (a guessed slug was dead on 2026-10-14). The company page and Facebook versions of the same job carry the links directly.
+- Bait post (profile only, max ONE per day, only for broad easy roles). Standard line (Levon's wording, 2026-10-25): "Want the link? Comment and send me a message with your field: history, law, finance, journalism or tech. I'll reply with the apply link." Adapt the field list to the role (languages for a language role, "Field: ..." for domain roles, tools or specialties otherwise); keep the rest of the sentence unchanged. No "Connect with me". The bait post carries no link. Do NOT prepare first-comment text (Buffer free has no first comment; Levon replies to commenters himself). Instead end the package with one line per bait post: "Reply link (for commenters): <exact talentsforai.com job URL with utm_content=comment>"; for multi-country/language roles list EVERY link in full (utm_source=linkedin&utm_medium=social&utm_campaign=jobs&utm_content=comment). Take the URL from the verified job page, never build it from the title (a guessed slug was dead on 2026-10-14). The company page and Facebook versions of the same job carry the links directly.
 
 ## Images (1080x1080 cards, style: white, big black headline, flat flags with country/language names, purple pay line)
 - Build with `python3 tools/make_card.py spec.json out.png` (run `npm i` inside tools/ first for flag SVGs; needs playwright + chromium). See the docstring for the spec format. Flat SVG flags only (never wavy emoji). 1-4 flags big, 5-8 smaller in a 4x2 grid, 9+ smaller.
