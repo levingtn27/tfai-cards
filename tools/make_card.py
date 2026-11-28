@@ -14,7 +14,8 @@ FLAGS = os.path.join(HERE, "node_modules", "flag-icons", "flags", "4x3")
 def layout(n):
     if n <= 4:  return dict(w=190, h=142, gap="26px 56px", lab=32, title=108, pay=124)
     if n <= 8:  return dict(w=170, h=128, gap="26px 44px", lab=30, title=92,  pay=110)
-    return dict(w=130, h=98, gap="18px 34px", lab=26, title=84, pay=100)
+    if n <= 12: return dict(w=130, h=98, gap="18px 34px", lab=26, title=84, pay=100)
+    return dict(w=118, h=88, gap="14px 26px", lab=21, title=78, pay=96)
 
 def build_html(spec):
     L = layout(len(spec.get("flags", [])))
